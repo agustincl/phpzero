@@ -99,8 +99,13 @@
 <section data-markdown >
 <script type="text/template">
 
-## Title
-Here some content.  
+## Virtualhost
+<Directory />
+    Options FollowSymLinks
+    AllowOverride None
+    Order deny,allow
+    Deny from all
+</Directory> 
 </script>
 </section>
 
