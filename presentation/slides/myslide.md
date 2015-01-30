@@ -1,3 +1,4 @@
-## Título
+## Configuración de aplicaciones PHP
 
-Este es mi texto...
+> global.php
+> local.php
