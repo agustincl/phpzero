@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>PHP Zero</title>
+
+		<meta name="description" content="PHP Zero - Practical course for mastering PHP with good practices">
+		<meta name="author" content="Agustín F. Calderón M.">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../assets/vendor/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../assets/vendor/reveal.js/css/theme/moon.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../assets/vendor/reveal.js/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = '../assets/vendor/reveal.js/css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		
+		<style type="text/css">
+            /* overrides */
+            /*body {
+                background: #040E27;
+                background: -moz-radial-gradient(center, circle cover, #555a5f 0%, #040E27 100%);
+                background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #555a5f), color-stop(100%, #040E27));
+                background: -webkit-radial-gradient(center, circle cover, #555a5f 0%, #040E27 100%);
+                background: -o-radial-gradient(center, circle cover, #555a5f 0%, #040E27 100%);
+                background: -ms-radial-gradient(center, circle cover, #555a5f 0%, #040E27 100%);
+                background: radial-gradient(center, circle cover, #555a5f 0%, #040E27 100%);
+                background-color: #040E27;
+            }*/
+
+            .zf-color {
+                color: #68B604;
+            }
+
+            .mysql-color {
+                color: #e97b00;
+            }
+
+            .doctrine-bg {
+                background-color: #040E27;
+            }
+
+            .reveal section img {
+                border: 0;
+                background: none;
+                box-shadow: 0 0 #000;
+            }
+
+            .reveal pre {
+                width: 100%;
+                font-size: 0.68em;
+            }
+
+            .reveal pre code {
+                max-height: 600px;
+            }
+        </style>
+        
+        
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				
+	<section>
+                 <h1>
+                     <span class="mysql-color">PHP Zero</span>
+                     <span class="zf-color"></span>
+                 </h1>
+                 <h1>
+                     <img
+                         src="../assets/img/PHP-logo.svg"
+                         alt="PHP" border="0"
+                         height="100px"
+                         style="margin-bottom: -50px; "
+                     />
+                      &nbsp;
+                     <img
+                         src="../assets/img/mysql.svg"
+                         alt="MySQL"
+                         border="0"
+                         height="100px"
+                         style="margin-bottom: -50px;"
+                     /><br/>
+                      &nbsp;
+                     <img
+                         src="../assets/img/zf2-logo-mark.svg"
+                         alt="Zend Framework 2"
+                         border="0"
+                         height="200px"
+                         style="margin-bottom: -120px;"
+                     />
+                      &nbsp;
+                     <img
+                         src="../assets/img/symfony_black_01.png"
+                         alt="Zend Framework 2"
+                         border="0"
+                         height="100px"
+                         style="margin-bottom: -80px;"
+                     />
+                 </h1>
+             </section>
+                <section>
+                    <h1>
+                        Hello!
+                    </h1>
+                </section>
+                <section>
+                    <h2>
+                        <a href="http://agustincl.github.com/" target="_blank" rel="me">Agustín F. Calderón M.</a>
+                    </h2>
+                </section>
+                <section>
+                    <img
+                        src="../assets/img/gh.svg"
+                        alt="Agustincl on Github"
+                        height="70px"
+                        style="margin: 15px;"
+                        />
+                    <img
+                        src="../assets/img/twitter.svg"
+                        alt="Agustincl on Twitter"
+                        height="65px"
+                        style="margin: 15px;"
+                    />
+                    <h2><a href="http://twitter.com/agustincl" target="_blank">Agustincl</a></h2>
+                </section>
+                
+
+<section data-markdown >
+<script type="text/template">
+
+## <span class="mysql-color">Presentations</span>
+Who, why, what...  
+</script>
+</section>
+                
+                
+
+
+
+
+<section>
+    <h2>Questions?</h2>
+    <p>Send me a tweet <a href="https://twitter.com/agustincl" target="_blank">@Agustincl</a>!</p>
+</section>
+
+<section>
+    <h2>Fork it!</h2>
+    <p>
+        You can find these slides on GitHub at
+        <a href="https://github.com/agustincl/phpzero" target="_blank">
+            https://github.com/agustincl/phpzero
+        </a>
+    </p>
+</section>
+
+<section>
+    <h2>Thanks for listening!</h2>
+    <a href="https://joind.in/92751" target="_blank">https://joind.in/92751</a>
+    <br/>
+    <img src="http://chart.apis.google.com/chart?chs=400x400&cht=qr&chl=https://joind.in/92751" alt="Joind.in talk page QR code"/>
+</section>
+
+
+<section>
+<section data-markdown >
+<script type="text/template">
+## <span class="mysql-color">Yo, how do you d'at...</span>
+<a href="#" class="navigate-down">
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+</script>
+
+    
+</section>
+
+				<section>
+					<h1>Reveal.js</h1>
+					<h3>The HTML Presentation Framework</h3>
+					<p>
+						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+					</p>
+					<p>
+						<a href="https://github.com/hakimel/reveal.js">Documentation</a>
+					</p>
+				</section>
+
+				
+
+				
+
+
+				
+
+
+				
+
+
+
+				<section>
+					<h2>Pretty Code</h2>
+					<pre><code data-trim contenteditable>
+function linkify( selector ) {
+  if( supports3DTransforms ) {
+
+    var nodes = document.querySelectorAll( selector );
+
+    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+      var node = nodes[i];
+
+      if( !node.className ) {
+        node.className += ' roll';
+      }
+    }
+  }
+}
+					</code></pre>
+					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+				</section>
+
+				
+
+				
+
+				
+
+				
+				<section>
+					<h2>Speaker View</h2>
+					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
+					<p>Press the <em>S</em> key to try it out.</p>
+
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+
+				<section>
+					<h2>Export to PDF</h2>
+					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
+					<iframe src="//www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+				</section>
+
+				<section>
+					<h2>Take a Moment</h2>
+					<p>
+						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
+					</p>
+				</section>
+
+				
+
+    
+</section>
+
+
+</div>
+
+</div>
+
+		<script src="../assets/vendor/reveal.js/lib/js/head.min.js"></script>
+		<script src="../assets/vendor/reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../assets/vendor/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../assets/vendor/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../assets/vendor/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../assets/vendor/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../assets/vendor/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../assets/vendor/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
