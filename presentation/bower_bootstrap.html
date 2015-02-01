@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>PHP Zero - Basic</title>
+
+		<meta name="description" content="PHP Zero - Practical course for mastering PHP with good practices">
+		<meta name="author" content="Agustín F. Calderón M.">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../assets/vendor/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../assets/vendor/reveal.js/css/theme/moon.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../assets/vendor/reveal.js/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = '../assets/vendor/reveal.js/css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		
+		<style type="text/css">
+            /* overrides */
+            /*body {
+                background: #040E27;
+                background: -moz-radial-gradient(center, circle cover, #555a5f 0%, #040E27 100%);
+                background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #555a5f), color-stop(100%, #040E27));
+                background: -webkit-radial-gradient(center, circle cover, #555a5f 0%, #040E27 100%);
+                background: -o-radial-gradient(center, circle cover, #555a5f 0%, #040E27 100%);
+                background: -ms-radial-gradient(center, circle cover, #555a5f 0%, #040E27 100%);
+                background: radial-gradient(center, circle cover, #555a5f 0%, #040E27 100%);
+                background-color: #040E27;
+            }*/
+
+            .zf-color {
+                color: #68B604;
+            }
+
+            .mysql-color {
+                color: #e97b00;
+            }
+
+            .doctrine-bg {
+                background-color: #040E27;
+            }
+
+            .reveal section img {
+                border: 0;
+                background: none;
+                box-shadow: 0 0 #000;
+            }
+
+            .reveal pre {
+                width: 100%;
+                font-size: 0.68em;
+            }
+
+            .reveal pre code {
+                max-height: 600px;
+            }
+        </style>
+        
+        
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				
+				<section>
+                    <h1>
+                        <span class="mysql-color">PHP Zero</span><br/>
+                        <h3><span class="zf-color">Administrador de paquetes</span></h3>
+                        <h1><span class="zf-color">Bower</span></h1>
+                    </h1>                   
+                </section>
+<!-- *************** SLIDES BEGIN ********************* -->
+
+
+<section data-markdown >
+<script type="text/template">
+
+## Bower
+<span class="mysql-color">Bower</span><br/>
+Es un administrador de paquetes y se ejecuta sobre Git. 
+
+Necesitamos tener instalado Node.js y Git!
+<strong>Bower</strong> significa enramada y fue creado por los desarrolladores de Twitter.
+
+Reference: http://www.cristalab.com/tutoriales/bower-un-administrador-de-paquetes-para-la-web-c112570l/
+
+</script>
+</section>
+<section data-markdown >
+<script type="text/template">
+
+<span class="mysql-color">Bower</span><br/>
+Es una herramienta que nos permite definir que librerías necesitamos usar en nuestra aplicación web 
+y el sistema detecta las dependencias de los paquetes requeridos.
+
+
+
+
+</script>
+</section>
+<section data-markdown >
+<script type="text/template">
+
+<span class="mysql-color">Bower</span><br/>
+Ahora se preguntaran que tipo de paquetes están disponibles, bueno los paquetes mas conocidos son:
+<ul>
+	<li><span class="mysql-color">jQuery</span></li>
+	<li><span class="mysql-color">Bootstrap</span></li>
+    <li><span class="mysql-color"> Linux </span></li>
+	<li><span class="mysql-color"> AngularJS </span></li>
+</ul></br>
+todo depende de lo que nuestro proyecto necesite, en la actualidad bower cuenta con casi catorce mil paquetes.
+
+</script>
+</section>
+<section data-markdown >
+<script type="text/template">
+
+<span class="mysql-color">Como instalar Bower</span><br/>
+Bower es un paquete npm por lo tanto necesitamos NodeJS y con el siguiente comando lo podemos instalar. 
+<br/>
+	<em>npm install -g bower</em>
+<br/>
+
+Con esto quedaria disponible para todos los usuarios del sistema
+
+</script>
+</section>
+<section data-markdown >
+<script type="text/template">
+
+<span class="mysql-color">Como usar Bower</span><br/>
+Una vez instalado Bower podemos usarlo inmediatamente en nuestra aplicación para 
+descargar los paquetes que deseemos,  introduciremos el siguiente código:
+
+<br/>
+	<ul>
+		<li><em>bower install jQuery</em></li>
+		<li><em>bower install bootstrap</em></li>
+	</ul>
+</script>
+</section>
+<section data-markdown >
+<script type="text/template">
+
+<span class="mysql-color">Como usar Bower</span><br/>
+Los paquetes instalados quedan situados en el directorio donde se realizó la instalción,
+y quedará la estructura de la siguiente manera:
+<ul>
+	<li>bower_componets</li>
+	<li>&nbsp;&nbsp;|--jQuery</li>
+	<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--MIT-LICENSE.txt</li>
+	<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--bower.json</li>
+	<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--dist</li>
+	<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--src</li>
+</ul>
+
+</script>
+</section>
+<section data-markdown >
+<script type="text/template">
+
+<span class="mysql-color">Agrupar dependencias</span><br/>
+<b>Bower</b>nos provee un comando que nos permite crear un archivo bower.json
+<br/>
+	<ul><li><em>bower init</em></li></ul>
+
+Este archivo contiene informacion del código que estamos creando.
+</script>
+</section>
+<section data-markdown >
+<script type="text/template">
+
+<span class="mysql-color">Agrupar dependencias</span><br/>
+Este archivo bower.json contiene toda la información del codigo que estamos
+haciendo, y existe un apartado que es muy importante para las dependencias:
+<pre>"dependencies":{
+		malize-css": "*",
+        "modernizr": "*",
+        "jquery": "~2.0.2",
+        "underscore": "*",
+        "backbone": "*",
+        "requirejs": "*",
+        "mustache": "*"
+		}
+</pre>
+Al poner el * se nos bajará automáticamente la última versión disponible.
+
+</script>
+</section>
+<section data-markdown >
+<script type="text/template">
+
+<span class="mysql-color">Destino de paquetes</span><br/>
+El destino predeterminado para los paquetes es el folder <em>bower_components</em>.
+
+En la arquitectura web el directorio mas usado para estos paquetes es vendor por lo que
+crearemos un archivo <b>.bowerrc</b> y introduciremos el siguiente codigo:
+<pre>	{
+		"directory": "public/vendor"
+		"json":"bower.json"
+	 }
+</pre>
+Lo cual hará que los paquetes se guarden en el folder public/vendor o cualquiera que deseemos.
+
+</script>
+</section>
+<section data-markdown >
+<script type="text/template">
+
+<span class="mysql-color">Ejecutando Bower</span><br/>
+Por último, para que esta magia haga su función, ejecutamos el siguiente comando en el terminal:
+<pre>bower install</pre>
+Y ya tendremos nuestras librerías descargadas y listas para usar en nuestro proyecto.
+</script>
+</section>
+
+
+<!-- *************** SLIDES END *********************** -->
+
+
+			</div>
+
+		</div>
+
+		<script src="../assets/vendor/reveal.js/lib/js/head.min.js"></script>
+		<script src="../assets/vendor/reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../assets/vendor/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../assets/vendor/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../assets/vendor/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../assets/vendor/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../assets/vendor/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../assets/vendor/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
