@@ -1,3 +1,0 @@
-# VirtualHost
-
-Here some content...
