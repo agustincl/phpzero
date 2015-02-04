@@ -1,5 +1,5 @@
 {
-    "name": "acl/phpzero",
+    "name": "agustincl/phpzero",
     "type": "library",
     "description": "Development infraestructure for PHP 5.5",
     "keywords": ["development","infraestructure"],
