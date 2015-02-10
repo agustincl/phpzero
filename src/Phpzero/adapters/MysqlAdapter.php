@@ -8,7 +8,7 @@ class MysqlAdapter
 
     public function __construct($config)
     {
-        $this->config = $config;
+        $this->config = $config->application->db;
         $this->connect();
     }
     
@@ -22,12 +22,12 @@ class MysqlAdapter
         mysqli_select_db($this->link, $this->config['database']);
     }
 
-    public function queryRead($queryString)
+    public function fetch($queryString)
     {
         $array = [];
 
         $result = mysqli_query($this->link, $queryString);
-        while ($row = mysqli_fetch_assoc($result))
+        while ($row = mysqli_fetch_array($result))
         {
             $array[]=$row;
         }
@@ -35,7 +35,7 @@ class MysqlAdapter
         return $array;
     }
     
-    public function queryUpdate($queryString)
+    public function save($queryString)
     {
         mysqli_query($this->link, $queryString);
     }
