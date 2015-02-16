@@ -1,7 +1,3 @@
-# Binary gettext files #
-########################
-*.mo
-
 # Compiled source #
 ###################
 *.com
@@ -10,6 +6,10 @@
 *.exe
 *.o
 *.so
+
+# Binary gettext files #
+########################
+*.mo
 
 # Packages #
 ############
@@ -28,8 +28,7 @@
 ######################
 *.log
 #*.sql
-#*.sqlite
-data/logs/
+*.sqlite
 
 # OS generated files #
 ######################
@@ -57,36 +56,9 @@ vendor/
 composer.lock
 .~lock.*
 
-# Configuration files #
-#######################
-vendor/
-public/vendor/
-config/development.config.php
-config/autoload/local.php
-config/autoload/*.local.php
-!public/vendor/README.md
-data/cache/*
-!data/cache/.gitkeep
-
-# More exclution files #
-#######################
-*.local.php
-TestConfig.php
-TestConfiguration.php
-
-# Bower Public #
-################
-public/assets/vendor/
-
-
 # Third-Part Binaries #
 #######################
 vendor/bin
-
-# Zend Framework directories #
-##############################
-data/cache
-data/mail
 
 # Data #
 ########
@@ -94,9 +66,13 @@ data/logs/
 data/cache/
 data/sessions/
 data/tmp/
+data/mail/
 temp/
 
-# Legacy ZF1 #
-##############
-demos/
-extras/documentation
+# Configuration files #
+#######################
+*.global.php
+
+# Bower Public #
+#######################
+public/assets/vendor/
