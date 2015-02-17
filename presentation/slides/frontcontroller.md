@@ -1,2 +1,2 @@
 ## Front Controller
-![frontController](/assets/img/front_controller.svg)
+![frontController](phpzero/assets/img/front_controller.svg)
