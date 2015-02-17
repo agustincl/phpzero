@@ -1,3 +1,0 @@
-# Uso del mysqldump
-
-... lalala...
